@@ -12,60 +12,17 @@
 		<script src="https://dfilittobot.herokuapp.com/assets/modules/channel-web/inject.js"></script>
     </head>
     <body>
-        <!-- <header>
-            <div class="container">
-                <a href="https://dfilitto.github.io" class="branch"><img src="./img/logo.png" alt="Minha logo" title="Nome da minha logo"></a>
-                <nav class="menu">
-                    <ul>
-                        <li><a class="menu-link" href="index.html">Início</a></li>
-                        <li><a class="menu-link" href="porrtfolio.html">Portfólio</a></li>
-                        <li><a class="menu-link" href="contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header> 
-
-        <main class="container">
-            <article class="super-card">
-                <section class="super-card-img">
-                    <img src="./img/danilofilitto.jpg" alt="Foto do Danilo Filitto", title="Danilo Filitto">
-                    <h2>Danilo Filitto</h2>
-                </section>
-                <section class="super-card-text">
-                    <p>
-                        Meu nome é Danilo Filitto, sou Mestre em Ciência da Computação pela 
-                        Universidade Estadual de Maringá – UEM, Pós-Graduado em Redes de Computadores 
-                        e Comunicação de Dados pela Universidade do Estado do Paraná – UEL, Bacharel 
-                        em Ciência da Computação pela Universidade do Oeste Paulista – UNOESTE.
-                    </p>
-                    <p>
-                        Atuo na área acadêmica como professor desde 2006. 
-                        Atualmente leciono na UNOESTE (Universidade do Oeste Paulista) e no SENAC 
-                        (Serviço Nacional de Aprendizagem Comercial) da cidade de Presidente Prudente. 
-                        Além de professor sou desenvolvedor de jogos e palestrante.
-                    </p>
-                    <p>
-                        As Área de Pesquisa em qual atuo são: desenvolvimento de Softwares, 
-                        estrutura de dados, processamento de imagens digitais, 
-                        redes de computadores e desenvolvimento de jogos..
-                    </p>
-                </section>
-            </article>
-        </main> -->
-	    
-	    <div>
-
-
-	<iframe id="teste" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" width="640" height="480" allow="autoplay"></iframe>
-	
-	<script>
-		var myvideo = document.querySelector("teste");
-	</script>
-		    <script type="text/javascript">setTimeout(() => 
-							      {document.getElementById("cta1").classList.remove("d-none"); 
-								     document.getElementById("cta2").classList.remove("d-none")}, 1290000); // temporização da Call to Action (em milissegundos)
-		    </script>
-	    </div>
-	    
+		<!-- <iframe id="teste" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" 
+		width="640" height="480" allow="autoplay"></iframe> -->
+		<div class="player">
+			<video controls> 
+				<source src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" type="video/mp4>
+			</video>
+		</div>
+		
+		<script>
+			const media = document.querySelector('video');
+			const controls = document.querySelector('.controls');
+		</script>
     </body>
 </html>
