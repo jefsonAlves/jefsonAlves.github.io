@@ -14,16 +14,20 @@
     <body>
 		<!-- <iframe id="teste" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" 
 		width="640" height="480" allow="autoplay"></iframe> -->
+		
 		<div class="player">
-			<video controls> 
+			<video controls autoplay> 
 				<source src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" type="video/mp4>
 			</video>
 		</div>
 		
 		<script>
-			const media = document.querySelector('video');
+			
+			const mediaElem = document.querySelector("video");
+				mediaElem.audioTracks.onaddtrack = function(event){
+					audioTrackAdded(event.track);}
 			const controls = document.querySelector('.controls');
-			media.removeAttribute('controls');
+			//media.removeAttribute('controls');
 		</script>
     </body>
 </html>
