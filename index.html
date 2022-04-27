@@ -5,66 +5,112 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Home</title>
-
-      
-        
+	<style>
+		.video {
+			width: 100%;
+			border: 1px solid #000;
+		}
 		
-    </head>
-    <body>
+		.player {
+			display: table;
+			width: auto;
+			position: relative;
+			width: 50%;
+		}
+		
+		.unmuted {
+			background-image: url("");
+			background-repeat: no-repeat;
+			width: 20%;
+			height: 20%;
+			position: absolute;
+			left: 0%;
+			right: 0%;
+			top: 0%;
+			bottom: 0%;
+			margin: auto;
+		}
+		
+		.overlay {
+			visibility: hidden;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.9);
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		
+	    </style>
+</head>
+	<body>
 		<!-- <iframe id="teste" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" 
 		width="640" height="480" allow="autoplay"></iframe> //media.removeAttribute('controls'); "https://cdn.converteai.net/df39d79c-22e8-4a6f-bd40-02371a16896c/players/62561e08f96a7200095207ec/player.js" -->
+		<div class="player">
+			<video class="video" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" controls autoplay muted></video>
+			<div class="overlay">
+				<div class="unmuted"></div>
+			</div>
+		</div>
 		
-	    <script src="https://connect.facebook.net/signals/config/494785049010037?v=2.9.57&amp;r=stable" async=""></script>
-	    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
-	    <script>
-		!function(f,b,e,v,n,t,s)
-		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-		n.queue=[];t=b.createElement(e);t.async=!0;
-		t.src=v;s=b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t,s)}(window, document,'script',
-		'https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '494785049010037');
-		fbq('track', 'PageView');
+		<script>
+			const player = document.querySelector('player');
+			const media = document.querySelector('video');
+			const unmuted = document.querySelector('.unmuted');
+			const  overlay = document.querySelector('.overlay');
+			
+			var isPlaying = true;
+			
+			//altera estado da variavel acima
+			media.onplaying = function(){
+				isPlaying = true;
+			}
+			
+			//
+			media.onpause =function(){
+				isPlaying - false;
+			}
+			
+			//metodo para iniciar o vídeo
+			async function playVideo(){
+				if(media.paused && !isPlaying){
+					return media.playe();
+				}
+			}
+			
+			//metodo para pausar vídeo
+			async function pauseVideo(){
+				if(!media.paused && isPlaying){
+					return media.pause();
+				}
+			}
+			
+			//exibe o overlay
+			player.addEventListener("mouseover", function(event){
+				overlay.style.visibility = 'visible';
+			}}
+			
+			//ocutar o overlay
+			player.add\eventListener("mouseout", function(event){
+				overlay.style.visibility = 'hidden';
+			}}
+			
+			//Adiciona função click no botão de mudo
+			unmuted.addEventListener("click", function(event){
+				media.muted ^= 1;
+			}}
+						 
+			//remove os controles do player
+			media.removeAttribute('controls');
+			
+			//Inicia o vídeo
+			playVideo();
 		</script>
-	    <noscript>
-		    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=494785049010037&ev=PageView&noscript=1"/>
-	    </noscript>
-	    <script async="" src=""></script>
-	    <script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'AW-10825466771');
-	    </script>
-	    <header class="py-4">
-		<div class="container">
-		<div class="row justify-content-center">
-		<div class="col-lg-8 text-center">
-	
-
-		<script type="text/javascript" id="scr_62561e08f96a7200095207ec">
-		var s=document.createElement("script");s.
-		src="https://fast.wistia.com/assets/external/E-v1.js",s.async=!0,document.head.appendChild(s);</script>
-
-		</div>
-		</div>
-		</div>
-	</header
-	
-	<!-- video está aqui Abaixo -->
-	
-	    <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 1637000); // temporização da Call to Action (em milissegundos)
-	    </script>
-	    
-	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	    <iframe src="https://bid.g.doubleclick.net/xbbe/pixel?d=KAE" style="display: none;"></iframe>
-	
-	
+						
+						
 	</body>
 </html>
