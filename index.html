@@ -29,6 +29,7 @@
 			top: 0%;
 			bottom: 0%;
 			margin: auto;
+			backgroud
 		}
 		
 		.overlay {
@@ -50,6 +51,7 @@
 	<body>
 		<!-- <iframe id="teste" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" 
 		width="640" height="480" allow="autoplay"></iframe> //media.removeAttribute('controls'); "https://cdn.converteai.net/df39d79c-22e8-4a6f-bd40-02371a16896c/players/62561e08f96a7200095207ec/player.js" -->
+		
 		<div class="player">
 			<video class="video" src="https://drive.google.com/file/d/12S7uYLTWSYqHmxLdfquTDiUyBijnmC8C/preview" controls autoplay muted></video>
 			<div class="overlay">
@@ -78,7 +80,7 @@
 			//metodo para iniciar o vídeo
 			async function playVideo(){
 				if(media.paused && !isPlaying){
-					return media.playe();
+					return media.play();
 				}
 			}
 			
@@ -91,12 +93,12 @@
 			
 			//exibe o overlay
 			player.addEventListener("mouseover", function(event){
-				overlay.style.visibility = 'visible';
+				overlay.style.visibility = 'visible'
 			}}
 			
 			//ocutar o overlay
 			player.add\eventListener("mouseout", function(event){
-				overlay.style.visibility = 'hidden';
+				overlay.style.visibility = 'hidden'
 			}}
 			
 			//Adiciona função click no botão de mudo
