@@ -29,7 +29,8 @@
 			top: 0%;
 			bottom: 0%;
 			margin: auto;
-			backgroud
+			background-size: contain;
+			background-position: center;
 		}
 		
 		.overlay {
@@ -60,7 +61,7 @@
 		</div>
 		
 		<script>
-			const player = document.querySelector('player');
+			const player = document.querySelector('.player');
 			const media = document.querySelector('video');
 			const unmuted = document.querySelector('.unmuted');
 			const  overlay = document.querySelector('.overlay');
@@ -73,7 +74,7 @@
 			}
 			
 			//
-			media.onpause =function(){
+			media.onpause = function(){
 				isPlaying - false;
 			}
 			
